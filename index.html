@@ -1,44 +1,143 @@
 <!DOCTYPE html>
-<HTML lang="es">
-<HEAD>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Análisis de la accesibilidad web</title>
     <style>
-        p#bestinterest {
-            padding-left: 100px;
-            background: transparent url('note.gif') no-repeat top left;
+        .contenedor {
+            background-color: white;
+            text-align: center;
+            -webkit-box-shadow: 0px -1px 4px #000;
+        }
+        .cabecera {
+            background-color: #7FD2FF;
+            height: 20%;
+            padding: 20px 10px 20px 20px;
+            color: #fff;
+            font-size: 26px;
+            font-weight: normal;
+            text-shadow: 1px 1px 1px #000;
+            background-color: #7FD2FF;
+            border-top: 3px solid #666;
+            border-left: 3px solid #666;
+            border-right: 3px solid #666;            
+        }
+
+        .menu {
+            height: 10%;
+            padding: 10px;
+            background-color: #BDD2EF;
+            text-align: center;
+            border-left: 3px solid #666;
+            border-right: 3px solid #666;           
+        }
+        .izquierda {
+            height: 200px;
+            padding: 20px;
+            background-color: white;
+            float: left;
+            width: 700px; /*50%*/
+            border-right: 1px solid #757571;
+            border-left: 3px solid #666;
+        }
+        .derecha {
+            height: 200px;
+            padding: 20px;
+            background-color: white;
+            float: right;
+            width: 500px; /*40%*/
+            border-right: 3px solid #666;            
+        }
+        .pie {
+            height: 20%;
+            background-color: #D3D1C1;
+            clear: both;
+            border-bottom: 3px solid #666;            
+        }
+        .simbolo {
+            text-align: center;
+            font-size: 25px;
+            margin: 20px;
+            width: 22%;
+        }
+        .estadistica {
+            text-align: center;
+            font-size: 35px;
+            width: 22%;
+        }
+        .etiqueta {
+            text-align: left;
+            font-size: 14px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            width: 40%;
         }
     </style>
-    <TITLE>PAGINA DE PRUEBA</TITLE>
-</HEAD>
-<BODY>
-      <form action="http://example.com/prog/someprog" method="post">
-        <label for="food">What is your favorite food?</label>
-        <select id="food" name="food">
-            <optgroup label="Fruits">
-                <option value="1">Apples</option>
-                <option value="3">Bananas</option>
-                <option value="4">Peaches</option>
-                <option value="5">...</option>    
-             </optgroup>
-        </select>
-    </form>
-     <form action="http://example.com/prog/text-read" method="post">
-        <input type="image" name="submit1" src="note.gif" alt="Submit 1" />
-        <input type="image" name="submit2" src="home_large.gif" />
-    </form>
-    <p>--------------------------</p>
-    <img src="note.gif" usemap="#map1"
-         alt="Areas in the library. Select an area for more information on that area." />
-    <map id="map1" name="map1">
-        <area shape="rect" coords="0,0,30,30"
-              href="reference.html" alt="Reference" />
-        <area shape="rect" coords="34,34,100,100"
-              href="media.html" />
-    </map>
-    <p>--------------------------</p>
-</BODY>
-</HTML>
-
-
-
-
-
+</head>
+<body>
+    <div class="contenedor">
+        <div class="cabecera">RESUMEN DE LOS RESULTADOS</div>
+        <div class="menu"> <strong>Est&aacute;ndar: WCAG 2.0 &nbsp; Fecha: 30/01/2022 &nbsp; Recurso: Archivo </strong></div>
+        <div class="izquierda">
+            <table>               
+                <tr>
+                    <td scope="col" class="simbolo" style="background-color:#FF0000;">✖</td>
+                    <td scope="col" class="estadistica">4</td>
+                    <td scope="col" class="etiqueta">Total T&eacute;cnicas con errores</td>                        
+                </tr>
+                <tr>
+                    <td scope="col" class="simbolo" style="background-color: #FFFF00;">⚠</td>
+                    <td scope="col" class="estadistica">11</td>
+                    <td scope="col" class="etiqueta">Total T&eacute;cnicas con warnings (error potencial)</td>                        
+                </tr>
+                <tr>
+                    <td scope="col" class="simbolo" style="background-color:#33cc00;">&nbsp;✔</td>
+                    <td scope="col" class="estadistica">20</td>
+                    <td scope="col" class="etiqueta">Total T&eacute;cnicas exitosas</td>                        
+                </tr>
+                <tr>
+                    <td scope="col" class="simbolo" style="font-size: 20px; background-color:#c2bcb5;">&nbsp;NA</td>
+                    <td scope="col" class="estadistica">2</td>
+                    <td scope="col" class="etiqueta">No aplica. Sin revisar</td>                        
+                </tr>                
+            </table>
+        </div>
+        <div class="derecha">
+            <table>
+                <tr>
+                    <td scope="col" class="etiqueta">Porcentaje de accesibilidad</td>
+                    <td scope="col" class="simbolo" style="background-color:#516f8d; color:white">80 %</td>
+                </tr>
+                <tr>
+                    <td scope="col" class="etiqueta"></td>
+                    <td scope="col" class="simbolo" style="background-color:#356598; color:white"></td>
+                </tr>
+                <tr>
+                    <td scope="col" class="etiqueta"></td>
+                    <td scope="col" class="simbolo" style="background-color:#356598; color:white"></td>
+                </tr>
+                <tr>
+                    <td scope="col" class="etiqueta"></td>
+                    <td scope="col" class="simbolo" style="background-color:#356598; color:white"></td>
+                </tr>
+                <tr>
+                    <td scope="col" class="etiqueta">Evaluación completada</td>
+                    <td scope="col" class="simbolo" style="background-color:#356598; color:white">98 %</td>
+                </tr>
+                <tr>
+                    <td scope="col" class="etiqueta"></td>
+                    <td scope="col" class="simbolo" style="background-color:#356598; color:white"></td>
+                </tr>
+                <tr>
+                    <td scope="col" class="etiqueta"></td>
+                    <td scope="col" class="simbolo" style="background-color:#356598; color:white"></td>
+                </tr>
+                <tr>
+                    <td scope="col" class="etiqueta"></td>
+                    <td scope="col" class="simbolo" style="background-color:#356598; color:white"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="pie"></div>
+    </div>
+</body>
+</html>
