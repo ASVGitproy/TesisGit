@@ -5,6 +5,24 @@
     <title></title>  
 </head>
 <body>
+	<form action="http://www.example.com/cgi/subscribe/" method="post"><br /> 
+ <p>Enter your e-mail address to subscribe to our mailing list.</p><br /> 
+ <label for="address">Enter email address:</label><input type="text" 
+ id="address" name="address" /> 
+ <input type="submit" value="Subscribe" /><br /> 
+</form>
+	
+	<form action="http://www.example.com/cgi/redirect/" method="get"><br /> 
+    <p>Navigate the site.</p><br /> 
+    <select name="dest"><br /> 
+      <option value="/index.html">Home</option/><br /> 
+      <option value="/blog/index.html">My blog</option/><br /> 
+      <option value="/tutorials/index.html">Tutorials</option/><br /> 
+      <option value="/search.html">Search</option/><br /> 
+    </select><br /> 
+  <input type="submit" value="Go to Page" /><br /> 
+  </form> 
+
 	<a href="../video/marslanding.mp4"><img src="../images/spaceship.jpg" 
                 alt="Mars landing, video-only" width="193" height="255"/></a>
                 <br />
